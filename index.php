@@ -68,11 +68,18 @@ foreach($cursor as $doc){
 print_r ('</pre>');
 //////////////////////////////////////
 echo("<h1>Réponse 8 : </h1>");
-$filter	= ["anciennete" => ['$gt' => "10"]];
+$filter	= ['anciennete' => ['$gte' => 10] ];
 $option=[];
 $cursor = $empcol->find($filter,$option);
 print_r ('<pre>');	
 foreach($cursor as $doc){
 	print_r($doc);}
 print_r ('</pre>');
+
+
+
+
+
+
+
 ?>
